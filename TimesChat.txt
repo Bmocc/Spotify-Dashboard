@@ -1,0 +1,28 @@
+cd C:\Users\200035680\Desktop\VS Code\Code\TimesChat\TimesChat\
+
+
+| Frontend |
+
+cd C:\Users\200035680\Desktop\VS Code\Code\TimesChat\TimesChat\frontend-vite
+To re-build: 
+npm run build
+To run frontend for testing: 
+npm run dev
+
+
+
+| Backend |
+
+cd C:\Users\200035680\Desktop\VS Code\Code\TimesChat\TimesChat\backend
+To rebuild static files: 
+python manage.py collectstatic
+To run full app: 
+python manage.py runserver
+
+To generate model migration files:
+python manage.py makemigrations
+To commit migration:
+python manage.py makemigrations
+
+To inspect Sqlite3 db:
+python manage.py shell
