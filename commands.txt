@@ -22,7 +22,7 @@ python manage.py runserver
 To generate model migration files:
 python manage.py makemigrations
 To commit migration:
-python manage.py makemigrations
+python manage.py migrate
 
 To inspect Sqlite3 db:
 python manage.py shell
