@@ -1,0 +1,12 @@
+# .gitignore
+
+__pycache__/
+*.pyc
+*.sqlite3
+*.env
+venv/
+node_modules/
+.env
+frontend/node_modules/
+backend/__pycache__/
+backend/*.pyc

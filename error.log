@@ -1,0 +1,1897 @@
+"GET /api/search_artist/?name=Bob%20Marley HTTP/1.1" 500 59
+"GET /favicon.ico HTTP/1.1" 500 59
+Internal Server Error: /search_artist/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\renderers.py", line 726, in render
+    template = loader.get_template(self.template)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+"GET /search_artist/?name=Bob%20Marley HTTP/1.1" 500 85045
+Internal Server Error: /search_artist/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\renderers.py", line 726, in render
+    template = loader.get_template(self.template)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+"GET /search_artist/?name=Bob%20Marley HTTP/1.1" 500 85182
+Internal Server Error: /api/artist/7dGJo4pcD2V6oG8kP0tJRR/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: r_track_artist.id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\spotify_dashboard\backend\api\views.py", line 45, in artist_detail
+    track_ids = [rt.track_id for rt in rtracks]
+                                       ^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: r_track_artist.id
+"GET /api/artist/7dGJo4pcD2V6oG8kP0tJRR/ HTTP/1.1" 500 163536
+Internal Server Error: /api/audio_features/7dGJo4pcD2V6oG8kP0tJRR/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\spotify_dashboard\backend\api\views.py", line 119, in audio_features
+    features = AudioFeatures.objects.get(artist_id=artist_id)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 635, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\query.py", line 1609, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\query.py", line 1641, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\query.py", line 1491, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\query.py", line 1303, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\query.py", line 1768, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'artist_id' into field. Choices are: acousticness, analysis_url, danceability, duration, energy, id, instrumentalness, key, liveness, loudness, mode, speechiness, tempo, time_signature, valence
+"GET /api/audio_features/7dGJo4pcD2V6oG8kP0tJRR/ HTTP/1.1" 500 158088
+Internal Server Error: /api/recommender/7dGJo4pcD2V6oG8kP0tJRR/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: recommender() got an unexpected keyword argument 'artist_id'
+"GET /api/recommender/7dGJo4pcD2V6oG8kP0tJRR/?type=songs HTTP/1.1" 500 96519
+Internal Server Error: /api/recommender/7dGJo4pcD2V6oG8kP0tJRR/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: recommender() got an unexpected keyword argument 'artist_id'
+"GET /api/recommender/7dGJo4pcD2V6oG8kP0tJRR/?type=albums HTTP/1.1" 500 96532
+Internal Server Error: /api/recommender/7dGJo4pcD2V6oG8kP0tJRR/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: recommender() got an unexpected keyword argument 'artist_id'
+"GET /api/recommender/7dGJo4pcD2V6oG8kP0tJRR/?type=songs HTTP/1.1" 500 96519
+Internal Server Error: /api/recommender/7dGJo4pcD2V6oG8kP0tJRR/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: recommender() got an unexpected keyword argument 'artist_id'
+"GET /api/recommender/7dGJo4pcD2V6oG8kP0tJRR/?type=genres HTTP/1.1" 500 96532
+Internal Server Error: /api/recommender/7dGJo4pcD2V6oG8kP0tJRR/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: recommender() got an unexpected keyword argument 'artist_id'
+"GET /api/recommender/7dGJo4pcD2V6oG8kP0tJRR/?type=albums HTTP/1.1" 500 96532
+Internal Server Error: /api/artist/7dGJo4pcD2V6oG8kP0tJRR/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: r_track_artist.id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\spotify_dashboard\backend\api\views.py", line 45, in artist_detail
+    track_ids = [rt.track_id for rt in rtracks]
+                                       ^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: r_track_artist.id
+"GET /api/artist/7dGJo4pcD2V6oG8kP0tJRR/ HTTP/1.1" 500 163536
+Internal Server Error: /api/recommender/7dGJo4pcD2V6oG8kP0tJRR/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: recommender() got an unexpected keyword argument 'artist_id'
+"GET /api/recommender/7dGJo4pcD2V6oG8kP0tJRR/?type=songs HTTP/1.1" 500 96519
+Internal Server Error: /api/artist/7dGJo4pcD2V6oG8kP0tJRR/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: r_track_artist.id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\spotify_dashboard\backend\api\views.py", line 45, in artist_detail
+    track_ids = [rt.track_id for rt in rtracks]
+                                       ^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: r_track_artist.id
+"GET /api/artist/7dGJo4pcD2V6oG8kP0tJRR/ HTTP/1.1" 500 163536
+Internal Server Error: /api/artist/7dGJo4pcD2V6oG8kP0tJRR/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: r_track_artist.id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\spotify_dashboard\backend\api\views.py", line 45, in artist_detail
+    track_ids = [rt.track_id for rt in rtracks]
+                                       ^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: r_track_artist.id
+"GET /api/artist/7dGJo4pcD2V6oG8kP0tJRR/ HTTP/1.1" 500 163536
+Internal Server Error: /api/artist/7dGJo4pcD2V6oG8kP0tJRR/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: r_track_artist.id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\spotify_dashboard\backend\api\views.py", line 45, in artist_detail
+    track_ids = [rt.track_id for rt in rtracks]
+                                       ^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: r_track_artist.id
+"GET /api/artist/7dGJo4pcD2V6oG8kP0tJRR/ HTTP/1.1" 500 163801
+Internal Server Error: /api/artist/7dGJo4pcD2V6oG8kP0tJRR/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: r_track_artist.id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\spotify_dashboard\backend\api\views.py", line 45, in artist_detail
+    track_ids = [rt.track_id for rt in rtracks]
+                                       ^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: r_track_artist.id
+"GET /api/artist/7dGJo4pcD2V6oG8kP0tJRR/ HTTP/1.1" 500 163801
+Internal Server Error: /api/recommender/7dGJo4pcD2V6oG8kP0tJRR/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: recommender() got an unexpected keyword argument 'artist_id'
+"GET /api/recommender/7dGJo4pcD2V6oG8kP0tJRR/?type=songs HTTP/1.1" 500 96784
+Internal Server Error: /api/artist/7dGJo4pcD2V6oG8kP0tJRR/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: r_track_artist.id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\spotify_dashboard\backend\api\views.py", line 45, in artist_detail
+    track_ids = [rt.track_id for rt in rtracks]
+                                       ^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: r_track_artist.id
+"GET /api/artist/7dGJo4pcD2V6oG8kP0tJRR/ HTTP/1.1" 500 163801
+Internal Server Error: /api/audio_features/7dGJo4pcD2V6oG8kP0tJRR/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\spotify_dashboard\backend\api\views.py", line 119, in audio_features
+    features = AudioFeatures.objects.get(artist_id=artist_id)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 635, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\query.py", line 1609, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\query.py", line 1641, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\query.py", line 1491, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\query.py", line 1303, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\query.py", line 1768, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'artist_id' into field. Choices are: acousticness, analysis_url, danceability, duration, energy, id, instrumentalness, key, liveness, loudness, mode, speechiness, tempo, time_signature, valence
+"GET /api/audio_features/7dGJo4pcD2V6oG8kP0tJRR/ HTTP/1.1" 500 158353
+Internal Server Error: /api/artist/7dGJo4pcD2V6oG8kP0tJRR/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: r_track_artist.id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\spotify_dashboard\backend\api\views.py", line 45, in artist_detail
+    track_ids = [rt.track_id for rt in rtracks]
+                                       ^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: r_track_artist.id
+"GET /api/artist/7dGJo4pcD2V6oG8kP0tJRR/ HTTP/1.1" 500 163801
+Internal Server Error: /api/audio_features/7dGJo4pcD2V6oG8kP0tJRR/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\spotify_dashboard\backend\api\views.py", line 119, in audio_features
+    features = AudioFeatures.objects.get(artist_id=artist_id)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 635, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\query.py", line 1609, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\query.py", line 1641, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\query.py", line 1491, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\query.py", line 1303, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\query.py", line 1768, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'artist_id' into field. Choices are: acousticness, analysis_url, danceability, duration, energy, id, instrumentalness, key, liveness, loudness, mode, speechiness, tempo, time_signature, valence
+"GET /api/audio_features/7dGJo4pcD2V6oG8kP0tJRR/ HTTP/1.1" 500 158088
+Internal Server Error: /api/artist/7dGJo4pcD2V6oG8kP0tJRR/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\spotify_dashboard\backend\api\views.py", line 67, in artist_detail
+    "popularity": a.popularity.round(2),
+                  ^^^^^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'round'
+"GET /api/artist/7dGJo4pcD2V6oG8kP0tJRR/ HTTP/1.1" 500 115050
+Internal Server Error: /api/audio_features/7dGJo4pcD2V6oG8kP0tJRR/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\spotify_dashboard\backend\api\views.py", line 63, in audio_features
+    features = AudioFeatures.objects.get(artist_id=artist_id)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 635, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\query.py", line 1609, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\query.py", line 1641, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\query.py", line 1491, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\query.py", line 1303, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\query.py", line 1768, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'artist_id' into field. Choices are: acousticness, analysis_url, danceability, duration, energy, id, instrumentalness, key, liveness, loudness, mode, speechiness, tempo, time_signature, valence
+"GET /api/audio_features/7dGJo4pcD2V6oG8kP0tJRR/ HTTP/1.1" 500 158577
+Internal Server Error: /api/similar_artists/7dGJo4pcD2V6oG8kP0tJRR/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\spotify_dashboard\backend\api\views.py", line 40, in similar_artists
+    similar_artists = find_similar_artists_cosine(artist_id)
+TypeError: find_similar_artists_cosine() missing 1 required positional argument: 'artist_id'
+"GET /api/similar_artists/7dGJo4pcD2V6oG8kP0tJRR/ HTTP/1.1" 500 100667
+Internal Server Error: /api/similar_artists/7dGJo4pcD2V6oG8kP0tJRR/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\spotify_dashboard\backend\api\views.py", line 40, in similar_artists
+    similar_artists = find_similar_artists_cosine(artist_id)
+TypeError: find_similar_artists_cosine() missing 1 required positional argument: 'artist_id'
+"GET /api/similar_artists/7dGJo4pcD2V6oG8kP0tJRR/ HTTP/1.1" 500 100667
+Internal Server Error: /api/recommender/2QsynagSdAqZj3U9HgDzjD/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: recommender() got an unexpected keyword argument 'artist_id'
+"GET /api/recommender/2QsynagSdAqZj3U9HgDzjD/?type=songs HTTP/1.1" 500 96519
+Internal Server Error: /api/similar_artists/7dGJo4pcD2V6oG8kP0tJRR/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\spotify_dashboard\backend\api\views.py", line 42, in similar_artists
+    similar_artists = find_similar_artists_cosine(artist_id)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\spotify_dashboard\backend\api\similar_artist.py", line 21, in find_similar_artists_cosine
+    if audio_features.exists():
+       ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 1288, in exists
+    return self.query.has_results(using=self.db)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\query.py", line 660, in has_results
+    return compiler.has_results()
+           ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1542, in has_results
+    return bool(self.execute_sql(SINGLE))
+                ~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: database is locked
+Internal Server Error: /api/recommender/2QsynagSdAqZj3U9HgDzjD/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: recommender() got an unexpected keyword argument 'artist_id'
+"GET /api/recommender/2QsynagSdAqZj3U9HgDzjD/?type=songs HTTP/1.1" 500 97137
+Internal Server Error: /api/recommender/7dGJo4pcD2V6oG8kP0tJRR/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: recommender() got an unexpected keyword argument 'artist_id'
+"GET /api/recommender/7dGJo4pcD2V6oG8kP0tJRR/?type=songs HTTP/1.1" 500 96872
+Internal Server Error: /api/similar_artists/7dGJo4pcD2V6oG8kP0tJRR/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\spotify_dashboard\backend\api\views.py", line 42, in similar_artists
+    similar_artists = get_top_similar_artists(artist_id)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\spotify_dashboard\backend\api\similar_artist.py", line 146, in get_top_similar_artists
+    vec = get_artist_feature_vector(artist, genre_to_index)
+TypeError: get_artist_feature_vector() takes 1 positional argument but 2 were given
+"GET /api/similar_artists/7dGJo4pcD2V6oG8kP0tJRR/ HTTP/1.1" 500 122890
+Internal Server Error: /api/similar_artists/246dkjvS1zLTtiykXe5h60/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\renderers.py", line 100, in render
+    ret = json.dumps(
+        data, cls=self.encoder_class,
+        indent=indent, ensure_ascii=self.ensure_ascii,
+        allow_nan=not self.strict, separators=separators
+    )
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\bmocc\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\bmocc\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\utils\encoders.py", line 67, in default
+    return super().default(obj)
+           ~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type Response is not JSON serializable
+"GET /api/similar_artists/246dkjvS1zLTtiykXe5h60/ HTTP/1.1" 500 105173
+Internal Server Error: /api/recommender/2QsynagSdAqZj3U9HgDzjD/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: recommender() got an unexpected keyword argument 'artist_id'
+"GET /api/recommender/2QsynagSdAqZj3U9HgDzjD/?acousticness=0.5&danceability=0.5&energy=0.5&instrumentalness=0.5&liveness=0.5&speechiness=0.5&valence=0.5 HTTP/1.1" 500 99395
+Internal Server Error: /api/recommender/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: recommender() missing 1 required positional argument: 'track_id'
+"GET /api/recommender/?acousticness=0.5&danceability=0.5&energy=0.5&instrumentalness=0.5&liveness=0.5&speechiness=0.5&valence=0.5 HTTP/1.1" 500 98652
+Internal Server Error: /api/recommender/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: recommender() missing 1 required positional argument: 'track_id'
+"GET /api/recommender/?acousticness=0.5&danceability=0.5&energy=0.5&instrumentalness=0.5&liveness=0.5&speechiness=0.5&valence=0.5 HTTP/1.1" 500 98652
+Internal Server Error: /api/recommender/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: api_precomputedtrack
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\spotify_dashboard\backend\api\views.py", line 14, in recommender
+    recommendations = get_recommendations(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\spotify_dashboard\backend\api\recommender.py", line 25, in get_recommendations
+    df = pd.DataFrame(list(qs))
+                      ~~~~^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 210, in __iter__
+    for row in compiler.results_iter(
+               ~~~~~~~~~~~~~~~~~~~~~^
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1525, in results_iter
+    results = self.execute_sql(
+        MULTI, chunked_fetch=chunked_fetch, chunk_size=chunk_size
+    )
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: api_precomputedtrack
+"GET /api/recommender/?danceability[]=0&danceability[]=0.62&energy[]=0.36&energy[]=0.9&tempo[]=0.16&tempo[]=0.66&valence[]=0.55&valence[]=1&top_n=10 HTTP/1.1" 500 178057
+Internal Server Error: /api/recommender/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: api_precomputedtrack
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\spotify_dashboard\backend\api\views.py", line 14, in recommender
+    recommendations = get_recommendations(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\spotify_dashboard\backend\api\recommender.py", line 25, in get_recommendations
+    df = pd.DataFrame(list(qs))
+                      ~~~~^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 210, in __iter__
+    for row in compiler.results_iter(
+               ~~~~~~~~~~~~~~~~~~~~~^
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1525, in results_iter
+    results = self.execute_sql(
+        MULTI, chunked_fetch=chunked_fetch, chunk_size=chunk_size
+    )
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: api_precomputedtrack
+"GET /api/recommender/?danceability[]=0&danceability[]=0.67&energy[]=0.24&energy[]=0.86&tempo[]=0.2&tempo[]=0.45&valence[]=0.59&valence[]=0.97&top_n=10 HTTP/1.1" 500 178103
+Internal Server Error: /api/recommender/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: precomputed_track.id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\spotify_dashboard\backend\api\views.py", line 14, in recommender
+    recommendations = get_recommendations(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\spotify_dashboard\backend\api\recommender.py", line 25, in get_recommendations
+    df = pd.DataFrame(list(qs))
+                      ~~~~^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 210, in __iter__
+    for row in compiler.results_iter(
+               ~~~~~~~~~~~~~~~~~~~~~^
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1525, in results_iter
+    results = self.execute_sql(
+        MULTI, chunked_fetch=chunked_fetch, chunk_size=chunk_size
+    )
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: precomputed_track.id
+"GET /api/recommender/?danceability[]=0.28&danceability[]=1&energy[]=0&energy[]=0.77&tempo[]=0.3&tempo[]=1&valence[]=0.46&valence[]=1&top_n=10 HTTP/1.1" 500 177712
+Internal Server Error: /api/recommender/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\renderers.py", line 100, in render
+    ret = json.dumps(
+        data, cls=self.encoder_class,
+        indent=indent, ensure_ascii=self.ensure_ascii,
+        allow_nan=not self.strict, separators=separators
+    )
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\bmocc\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\bmocc\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\utils\encoders.py", line 67, in default
+    return super().default(obj)
+           ~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type Response is not JSON serializable
+"GET /api/recommender/?danceability[]=0.51&danceability[]=0.85&energy[]=0&energy[]=0.8&tempo[]=0.22&tempo[]=1&valence[]=0&valence[]=0.51&top_n=10 HTTP/1.1" 500 106902
+Internal Server Error: /api/recommender/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\renderers.py", line 100, in render
+    ret = json.dumps(
+        data, cls=self.encoder_class,
+        indent=indent, ensure_ascii=self.ensure_ascii,
+        allow_nan=not self.strict, separators=separators
+    )
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\bmocc\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\bmocc\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\utils\encoders.py", line 67, in default
+    return super().default(obj)
+           ~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type Response is not JSON serializable
+"GET /api/recommender/?danceability[]=0&danceability[]=1&energy[]=0&energy[]=1&tempo[]=0&tempo[]=1&valence[]=0&valence[]=1&top_n=10 HTTP/1.1" 500 106796
+Internal Server Error: /api/recommender/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: precomputed_track.id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\spotify_dashboard\backend\api\views.py", line 14, in recommender
+    recommendations = get_recommendations(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\spotify_dashboard\backend\api\recommender.py", line 24, in get_recommendations
+    df = pd.DataFrame(list(qs))
+                      ~~~~^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 210, in __iter__
+    for row in compiler.results_iter(
+               ~~~~~~~~~~~~~~~~~~~~~^
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1525, in results_iter
+    results = self.execute_sql(
+        MULTI, chunked_fetch=chunked_fetch, chunk_size=chunk_size
+    )
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: precomputed_track.id
+"GET /api/recommender/?danceability[]=0.23&danceability[]=0.79&energy[]=0.35&energy[]=0.7&tempo[]=0.72&tempo[]=1&valence[]=0&valence[]=0.71&top_n=10 HTTP/1.1" 500 177791
+Internal Server Error: /api/recommender/
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: precomputed_track.name
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\spotify_dashboard\backend\api\views.py", line 14, in recommender
+    recommendations = get_recommendations(request)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\spotify_dashboard\backend\api\recommender.py", line 24, in get_recommendations
+    df = pd.DataFrame(list(qs))
+                      ~~~~^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\query.py", line 210, in __iter__
+    for row in compiler.results_iter(
+               ~~~~~~~~~~~~~~~~~~~~~^
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1525, in results_iter
+    results = self.execute_sql(
+        MULTI, chunked_fetch=chunked_fetch, chunk_size=chunk_size
+    )
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmocc\OneDrive\Documents\GA_Tech\Spring 2025\CSE_6242\Group Project\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: precomputed_track.name
+"GET /api/recommender/?danceability[]=0.25&danceability[]=0.89&energy[]=0&energy[]=0.38&tempo[]=0.72&tempo[]=1&valence[]=0&valence[]=0.77&top_n=10 HTTP/1.1" 500 177792
