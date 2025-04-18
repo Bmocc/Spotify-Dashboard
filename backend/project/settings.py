@@ -2,7 +2,10 @@ import os
 from pathlib import Path
 from decouple import config
 
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+# BASE_DIR = Path(__file__).resolve().parent.parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+print("✅ BASE_DIR resolves to:", str(BASE_DIR))
 
 STATIC_URL = '/assets/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'frontend/dist/assets')]
@@ -30,6 +33,7 @@ TEMPLATES = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -41,14 +45,15 @@ MIDDLEWARE = [
 ]
 
 INSTALLED_APPS = [
+    'corsheaders', 
     'django.contrib.admin',
     'django.contrib.auth',              
     'django.contrib.contenttypes',     
     'django.contrib.sessions',         
     'django.contrib.messages',        
     'django.contrib.staticfiles',      
-    'backend.project',
-    'backend.api',
+    'project',
+    'api',
     'rest_framework'                
 ]
 
@@ -56,7 +61,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',  
         # 'NAME': BASE_DIR.parent / 'spotify.sqlite',    
-        'NAME': BASE_DIR.parent / 'spotify_filtered.sqlite',        
+        'NAME': BASE_DIR / 'spotify_filtered.sqlite',        
     }
 }
 
@@ -100,8 +105,10 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 DEBUG = True
 
+CORS_ALLOW_ALL_ORIGINS = True
+
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost']  
 
-ROOT_URLCONF = 'backend.project.urls'  
+ROOT_URLCONF = 'project.urls'  
 
 SECRET_KEY = config("SECRET_KEY")

@@ -10,8 +10,11 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
-# Copy the rest of your React app code
+# Now copy the rest of the app (including tsconfig.json, src/, public/, etc.)
 COPY . .
+
+# Build the app now that everything is available
+RUN npm run build
 
 # Expose port 3000 for the React dev server
 EXPOSE 3000

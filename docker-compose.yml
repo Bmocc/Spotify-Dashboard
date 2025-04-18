@@ -6,6 +6,8 @@ services:
       - "8000:8000"
     volumes:
       - ./backend:/app
+      - ./frontend/dist:/app/frontend/dist
+      - ./spotify_filtered.sqlite:/app/spotify_filtered.sqlite
     environment:
       - DEBUG=1
       - SECRET_KEY="fjrwyjhyrjyrwj41ywtrj4wytj85w7ui46574oi3w7658l4ow6"
@@ -16,6 +18,7 @@ services:
     container_name: react_frontend
     volumes:
       - ./frontend:/app
+      - ./frontend/dist:/app/frontend_dist
       - /app/node_modules
     ports:
       - "3000:3000"
