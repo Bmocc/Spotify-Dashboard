@@ -1,4 +1,4 @@
-import React, { useCallback, useRef, useState, useContext, useEffect } from "react";
+import React, { useCallback, useRef, useState, useContext } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import MenuIcon from "@mui/icons-material/Menu";
 import Check from '@mui/icons-material/Check';
@@ -59,7 +59,6 @@ export const ArtistSearch: React.FC<ArtistSearchProps> = ({ onArtistSelected }) 
   const [selectedArtistName, setSelectedArtistName] = useState<string | null>(null);
   const [query, setQuery] = useState<string>("");
 
-  // Function to perform the search
   const performSearch = useCallback((queryValue: string) => {
     if (queryValue.trim().length > 0) {
       setDisabled(true);
@@ -82,17 +81,6 @@ export const ArtistSearch: React.FC<ArtistSearchProps> = ({ onArtistSelected }) 
     }
   }, []);
 
-  useEffect(() => {
-    if (query.trim().length > 0) {
-      const timer = setTimeout(() => {
-        performSearch(query);
-      }, 300); 
-      return () => clearTimeout(timer);
-    } else {
-      setSearchResults([]);
-      setResultsAnchorEl(null);
-    }
-  }, [query, performSearch]);
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" && !e.shiftKey) {

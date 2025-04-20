@@ -11,13 +11,13 @@ import {
 } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import axios from 'axios';
-import { Track, Artist } from '../models'; 
+import { Track, Artist } from '../models';
 
 export const Recommender: React.FC = () => {
   const [audioParams, setAudioParams] = useState({
     danceability: [0, 1] as number[],
     energy: [0, 1] as number[],
-    tempo: [0, 1] as number[],
+    tempo: [0, 250] as number[],
     valence: [0, 1] as number[],
   });
 
@@ -40,11 +40,29 @@ export const Recommender: React.FC = () => {
     setNumSongs(newValue as number);
   };
 
+  const customParamsSerializer = (params: Record<string, any>): string => {
+    const searchParams = new URLSearchParams();
+    Object.entries(params).forEach(([key, value]) => {
+      if (Array.isArray(value)) {
+        value.forEach((item) => {
+          searchParams.append(key, item.toString());
+        });
+      } else {
+        searchParams.append(key, value.toString());
+      }
+    });
+    return searchParams.toString();
+  };
+  
+
   const handleGeneratePlaylist = () => {
     setLoading(true);
     setError(null);
     axios
-      .get<Track[]>('/api/recommender/', { params: { ...audioParams, top_n: numSongs } })
+      .get<Track[]>('/api/recommender/', {
+        params: { ...audioParams, top_n: numSongs },
+        paramsSerializer: customParamsSerializer,
+      })
       .then((response) => {
         console.log('API response:', response.data);
         setRecommendations(response.data);
@@ -72,24 +90,31 @@ export const Recommender: React.FC = () => {
                 Adjust the sliders to select your preferred range of audio features.
               </Typography>
               <Grid container spacing={2}>
-                {Object.entries(audioParams).map(
-                  ([feature, value]: [string, number[]]) => (
+                {Object.entries(audioParams).map(([feature, value]: [string, number[]]) => {
+                  // Set slider properties based on the feature.
+                  const isTempo = feature === 'tempo';
+                  const min = isTempo ? 0 : 0;
+                  const max = isTempo ? 250 : 1;
+                  const step = isTempo ? 1 : 0.01;
+                  const formatValue = (val: number) => (isTempo ? val.toFixed(0) : val.toFixed(2));
+
+                  return (
                     <Grid item xs={12} key={feature}>
                       <Typography variant="subtitle1" gutterBottom>
-                        {feature.charAt(0).toUpperCase() + feature.slice(1)}: {value[0].toFixed(2)} – {value[1].toFixed(2)}
+                        {feature.charAt(0).toUpperCase() + feature.slice(1)}: {formatValue(value[0])} – {formatValue(value[1])}
                       </Typography>
                       <Slider
                         value={value}
                         onChange={handleSliderChange(feature)}
                         valueLabelDisplay="auto"
-                        min={0}
-                        max={1}
-                        step={0.01}
+                        min={min}
+                        max={max}
+                        step={step}
                         aria-labelledby={`${feature}-slider`}
                       />
                     </Grid>
-                  )
-                )}
+                  );
+                })}
                 {/* New slider for Number of Songs */}
                 <Grid item xs={12}>
                   <Typography variant="subtitle1" gutterBottom>

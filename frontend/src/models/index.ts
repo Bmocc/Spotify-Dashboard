@@ -11,6 +11,7 @@ export interface Artist {
     };
     topTracks: { trackName: string; popularity: number }[];
     trendData: { date: string; popularity: number }[];
+    albums: Album[];
   }
   
   

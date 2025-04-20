@@ -19,10 +19,71 @@ interface AudioFeaturesProps {
 }
 
 interface AudioFeaturesResponse {
-    artistFeatures: AudioFeaturesData;
-    genreFeatures: AudioFeaturesData;
-  }
-  
+  artistFeatures: AudioFeaturesData;
+  genreFeatures: AudioFeaturesData;
+}
+
+interface RadarChartProps {
+  data: any[];
+  chartTitle: string;
+  radarName: string;
+}
+
+// Component for the artist's radar chart
+const ArtistRadarChart: React.FC<RadarChartProps> = ({ data, chartTitle, radarName }) => {
+  const theme = useTheme();
+  return (
+    <Paper sx={{ flex: 1, height: 600 }}>
+      <Typography variant="h6" align="center" sx={{ mt: 2 }}>
+        {chartTitle}
+      </Typography>
+      <ResponsiveContainer width="100%" height="90%">
+        <RadarChart data={data}>
+          <PolarGrid />
+          <PolarAngleAxis dataKey="subject" />
+          <PolarRadiusAxis angle={30} domain={[0, 1]} />
+          <Radar
+            name={radarName}
+            dataKey="value"
+            stroke={theme.palette.primary.main}
+            fill={theme.palette.primary.main}
+            fillOpacity={0.6}
+          />
+          <Tooltip />
+          <Legend />
+        </RadarChart>
+      </ResponsiveContainer>
+    </Paper>
+  );
+};
+
+// Component for the overall average (genre) radar chart
+const GenreRadarChart: React.FC<RadarChartProps> = ({ data, chartTitle, radarName }) => {
+  const theme = useTheme();
+  return (
+    <Paper sx={{ flex: 1, height: 600 }}>
+      <Typography variant="h6" align="center" sx={{ mt: 2 }}>
+        {chartTitle}
+      </Typography>
+      <ResponsiveContainer width="100%" height="90%">
+        <RadarChart data={data}>
+          <PolarGrid />
+          <PolarAngleAxis dataKey="subject" />
+          <PolarRadiusAxis angle={30} domain={[0, 1]} />
+          <Radar
+            name={radarName}
+            dataKey="value"
+            stroke={theme.palette.primary.main}
+            fill={theme.palette.primary.main}
+            fillOpacity={0.6}
+          />
+          <Tooltip />
+          <Legend />
+        </RadarChart>
+      </ResponsiveContainer>
+    </Paper>
+  );
+};
 
 export const AudioFeatures: React.FC<AudioFeaturesProps> = ({ artistId, title }) => {
   const theme = useTheme();
@@ -32,11 +93,11 @@ export const AudioFeatures: React.FC<AudioFeaturesProps> = ({ artistId, title })
 
   useEffect(() => {
     setLoading(true);
-    axios.get<AudioFeaturesResponse>(`/api/audio_features/${artistId}/`)
+    axios
+      .get<AudioFeaturesResponse>(`/api/audio_features/${artistId}/`)
       .then(response => {
         setData(response.data);
-        console.log("Audio features data:", response.data);
-        setError(null); 
+        setError(null);
         setLoading(false);
       })
       .catch(err => {
@@ -50,6 +111,7 @@ export const AudioFeatures: React.FC<AudioFeaturesProps> = ({ artistId, title })
   if (error) return <div>{error}</div>;
   if (!data) return <div>No audio features available.</div>;
 
+  // Prepare the data for each radar chart
   const radarDataArtist = [
     { subject: 'Acousticness', value: data.artistFeatures.acousticness, fullMark: 1 },
     { subject: 'Danceability', value: data.artistFeatures.danceability, fullMark: 1 },
@@ -70,94 +132,50 @@ export const AudioFeatures: React.FC<AudioFeaturesProps> = ({ artistId, title })
     { subject: 'Valence', value: data.genreFeatures.valence, fullMark: 1 },
   ];
 
-
   return (
     <Paper
       elevation={5}
       sx={{
-        width: 900,
-        minHeight: 500,
-        backgroundColor: theme.palette.background.default,
         p: 2,
-        position: 'relative',
+        width: '100%',
+        minHeight: 650, // Ensure enough height for the charts (600px) plus additional spacing
+        backgroundColor: theme.palette.background.default,
+        position: 'relative'
       }}
     >
-    {/* Title */}
-    <Box
-    sx={{
-        position: 'absolute',
-        top: 10,
-        left: '50%',
-        transform: 'translateX(-50%)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        height: 50,
-    }}
-    >
-    {title && (
-        <Typography variant="h4" align="center" gutterBottom>
-        {title}
-        </Typography>
-    )}
-    </Box>
-
-    <Box sx={{ top: 60, display: 'flex', justifyContent: 'space-between', gap: 2 }}>
-
-      {/* Radar Chart Section */}
-      <Paper
+      {/* Header Title */}
+      <Box
         sx={{
-          top: 100,
-          width: 500,
-          height: 400,
-          left: 10,
+          position: 'absolute',
+          top: 10,
+          left: '50%',
+          transform: 'translateX(-50%)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          height: 50,
         }}
       >
-        <ResponsiveContainer width="100%" height="100%">
-          <RadarChart data={radarDataArtist}>
-            <PolarGrid />
-            <PolarAngleAxis dataKey="subject" />
-            <PolarRadiusAxis angle={30} domain={[0, 1]} />
-            <Radar
-              name="Audio Feature of Artist"
-              dataKey="value"
-              stroke={theme.palette.primary.main}
-              fill={theme.palette.primary.main}
-              fillOpacity={0.6}
-            />
-            <Tooltip />
-            <Legend />
-          </RadarChart>
-        </ResponsiveContainer>
-      </Paper>
+        {title && (
+          <Typography variant="h4" align="center">
+            {title}
+          </Typography>
+        )}
+      </Box>
 
-      {/* Comparative Insights Section */}
-      <Paper
-        sx={{
-          top: 100,
-          width: 500,
-          height: 400,
-          right: 10,
-        }}
-      >
-        <ResponsiveContainer width="100%" height="100%">
-          <RadarChart data={radarDataGenre}>
-            <PolarGrid />
-            <PolarAngleAxis dataKey="subject" />
-            <PolarRadiusAxis angle={30} domain={[0, 1]} />
-            <Radar
-              name="Audio Feature of Genre"
-              dataKey="value"
-              stroke={theme.palette.primary.main}
-              fill={theme.palette.primary.main}
-              fillOpacity={0.6}
-            />
-            <Tooltip />
-            <Legend />
-          </RadarChart>
-        </ResponsiveContainer>
-      </Paper>
-    </Box>
+      {/* Side-by-side radar charts */}
+      <Box sx={{ mt: 7, display: 'flex', gap: 2 }}>
+        <ArtistRadarChart
+          data={radarDataArtist}
+          chartTitle="Artist Audio Features"
+          radarName="Artist Features"
+        />
+        <GenreRadarChart
+          data={radarDataGenre}
+          chartTitle="Overall Average Audio Features"
+          radarName="Genre Features"
+        />
+      </Box>
     </Paper>
   );
 };
