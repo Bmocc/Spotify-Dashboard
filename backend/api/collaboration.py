@@ -51,11 +51,14 @@ def get_collaborations(artist_id):
             "explicit": t.explicit,
         } for t in tracks]
 
-        links.append({
-            "source": main_node_id,
-            "target": artist_id_to_node_id[collab_id],
-            "sharedTracks": track_list
-        })
+        # Only add a link if there is at least one shared track.
+        if track_list:
+            links.append({
+                "source": main_node_id,
+                "target": artist_id_to_node_id[collab_id],
+                "sharedTracks": track_list
+            })
+
 
     data = {
         "nodes": nodes,

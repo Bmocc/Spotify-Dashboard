@@ -9,9 +9,9 @@ def get_recommendations(request):
         for feature in slider_features:
             values = request.query_params.getlist(feature)
             if not values or len(values) < 2:
-                slider_ranges[feature] = [0.0, 1.0]
+                slider_ranges[feature.strip("[]")] = [0.0, 1.0]
             else:
-                slider_ranges[feature] = [float(values[0]), float(values[1])]
+                slider_ranges[feature.strip("[]")] = [float(values[0]), float(values[1])]
     except ValueError:
         return {"error": "Invalid slider values provided."}
     
@@ -22,6 +22,9 @@ def get_recommendations(request):
 
     qs = PrecomputedTrack.objects.all().values()
     df = pd.DataFrame(list(qs))
+    print(df.dtypes)
+    print(df[['danceability', 'energy', 'tempo', 'valence']].describe())
+
     if df.empty:
         return []
     

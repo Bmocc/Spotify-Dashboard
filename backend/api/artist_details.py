@@ -1,14 +1,12 @@
-from .models import Artists, RTrackArtist, Tracks, RArtistGenre, RAlbumsArtists, Albums
+from .models import Artists, RTrackArtist, Tracks, RArtistGenre, RAlbumsArtists, RAlbumsTracks, Albums
 from django.db.models import Avg, Count
 import pandas as pd
 
 def get_artist_details(artist_id):
     artist = Artists.objects.get(pk=artist_id)
 
-
     rtracks = RTrackArtist.objects.filter(artist_id=artist_id)
     total_tracks = rtracks.count()
-
     track_ids = [rt.track_id for rt in rtracks]
 
     top_tracks_qs = Tracks.objects.filter(id__in=track_ids).order_by('-popularity')[:10]
@@ -28,35 +26,35 @@ def get_artist_details(artist_id):
         else:
             solo_count += 1
 
-
-    genres = RArtistGenre.objects.filter(artist_id=artist_id).values_list('genre_id', flat=True)
+    genres = list(RArtistGenre.objects.filter(artist_id=artist_id).values_list('genre_id', flat=True))
 
     album_ids = RAlbumsArtists.objects.filter(artist_id=artist_id).values_list('album_id', flat=True)
-
     albums_qs = Albums.objects.filter(id__in=album_ids)
 
-    album_list = [{
-        "albumName": a.name,
-        "popularity": a.popularity,
-        "releaseDate": pd.to_datetime(a.release_date, unit='ms', errors='coerce').strftime('%Y-%m-%d') if a.release_date else None
-    } for a in albums_qs]
+    album_list = []
+    for a in albums_qs:
+        release_date_str = pd.to_datetime(a.release_date, unit='ms', errors='coerce').strftime('%m/%d/%Y') if a.release_date else None
+
+
+        track_ids_for_album = RAlbumsTracks.objects.filter(album_id=a.id).values_list('track_id', flat=True)
+        track_list = [{
+            "id": t.id,
+            "name": t.name,
+            "duration": t.duration,
+            "popularity": t.popularity,
+            "explicit": t.explicit,
+            "trackNumber": t.track_number,
+        } for t in Tracks.objects.filter(id__in=track_ids_for_album).order_by('track_number')]
+
+        album_obj = {
+            "albumName": a.name,
+            "popularity": a.popularity,
+            "releaseDate": release_date_str,
+            "tracklist": track_list,
+        }
+        album_list.append(album_obj)
 
     album_count = albums_qs.count()
-
-    albums_df = pd.DataFrame.from_records(
-    albums_qs.values('name', 'popularity', 'release_date')
-)
-
-    if not albums_df.empty:
-        albums_df['release_date'] = pd.to_datetime(albums_df['release_date'], unit='ms', errors='coerce')
-        albums_df = albums_df.dropna(subset=['release_date'])
-
-        albums_df['month'] = albums_df['release_date'].dt.to_period('M').astype(str)
-
-        trend_df = albums_df.groupby('month').agg({'popularity': 'mean'}).reset_index()
-        trend_data = trend_df.to_dict(orient='records')
-    else:
-        trend_data = []
 
     data = {
         "id": artist.id,
@@ -73,7 +71,6 @@ def get_artist_details(artist_id):
         "topTracks": top_tracks,
         "albums": album_list,
         "numAlbums": album_count,
-        "trendData": trend_data,
     }
 
     return data
