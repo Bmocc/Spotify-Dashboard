@@ -111,7 +111,6 @@ export const AudioFeatures: React.FC<AudioFeaturesProps> = ({ artistId, title })
   if (error) return <div>{error}</div>;
   if (!data) return <div>No audio features available.</div>;
 
-  // Prepare the data for each radar chart
   const radarDataArtist = [
     { subject: 'Acousticness', value: data.artistFeatures.acousticness, fullMark: 1 },
     { subject: 'Danceability', value: data.artistFeatures.danceability, fullMark: 1 },
@@ -119,7 +118,7 @@ export const AudioFeatures: React.FC<AudioFeaturesProps> = ({ artistId, title })
     { subject: 'Instrumentalness', value: data.artistFeatures.instrumentalness, fullMark: 1 },
     { subject: 'Liveness', value: data.artistFeatures.liveness, fullMark: 1 },
     { subject: 'Speechiness', value: data.artistFeatures.speechiness, fullMark: 1 },
-    { subject: 'Valence', value: data.artistFeatures.valence, fullMark: 1 },
+    { subject: 'Positivity', value: data.artistFeatures.valence, fullMark: 1 },
   ];
 
   const radarDataGenre = [
@@ -129,7 +128,7 @@ export const AudioFeatures: React.FC<AudioFeaturesProps> = ({ artistId, title })
     { subject: 'Instrumentalness', value: data.genreFeatures.instrumentalness, fullMark: 1 },
     { subject: 'Liveness', value: data.genreFeatures.liveness, fullMark: 1 },
     { subject: 'Speechiness', value: data.genreFeatures.speechiness, fullMark: 1 },
-    { subject: 'Valence', value: data.genreFeatures.valence, fullMark: 1 },
+    { subject: 'Positivity', value: data.genreFeatures.valence, fullMark: 1 },
   ];
 
   return (
