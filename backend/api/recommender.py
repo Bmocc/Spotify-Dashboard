@@ -22,8 +22,6 @@ def get_recommendations(request):
 
     qs = PrecomputedTrack.objects.all().values()
     df = pd.DataFrame(list(qs))
-    print(df.dtypes)
-    print(df[['danceability', 'energy', 'tempo', 'valence']].describe())
 
     if df.empty:
         return []

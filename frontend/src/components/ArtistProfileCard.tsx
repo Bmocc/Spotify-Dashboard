@@ -32,7 +32,8 @@ export const ArtistProfile: React.FC<ArtistProfileProps> = ({ artistId }) => {
   const CustomDot = (props: any) => {
     const { cx, cy, payload } = props;
     const [dotSize, setDotSize] = useState(5);
-    const hitAreaSize = dotSize + 5; 
+    const hitAreaSize = dotSize + 1; 
+    const [isHovered, setIsHovered] = useState(false);
   
     return (
       <>
@@ -50,12 +51,18 @@ export const ArtistProfile: React.FC<ArtistProfileProps> = ({ artistId }) => {
           cx={cx}
           cy={cy}
           r={dotSize}
-          fill={theme.palette.secondary.main}
-          stroke="white"
+          fill={isHovered ? theme.palette.secondary.main : '#fff'}
+          stroke={theme.palette.secondary.main}
           strokeWidth={1}
           style={{ cursor: 'pointer' }}
-          onMouseEnter={() => setDotSize(8)}
-          onMouseLeave={() => setDotSize(5)}
+          onMouseEnter={() => {
+            setDotSize(13);
+            setIsHovered(true);
+          }}
+          onMouseLeave={() => {
+            setDotSize(5);
+            setIsHovered(false);
+          }}
           onClick={() => handleDotClick(payload)}
         />
       </>
@@ -166,7 +173,7 @@ export const ArtistProfile: React.FC<ArtistProfileProps> = ({ artistId }) => {
       <Paper
         elevation={5}
         sx={{
-          width: 600,
+          width: 800,
           minHeight: 400,
           backgroundColor: theme.palette.background.default,
           p: 2,

@@ -98,10 +98,14 @@ export const Recommender: React.FC = () => {
                   const step = isTempo ? 1 : 0.01;
                   const formatValue = (val: number) => (isTempo ? val.toFixed(0) : val.toFixed(2));
 
+                  const displayFeature = feature === 'valence'
+                    ? 'Positivity'
+                    : feature.charAt(0).toUpperCase() + feature.slice(1);
+
                   return (
                     <Grid item xs={12} key={feature}>
                       <Typography variant="subtitle1" gutterBottom>
-                        {feature.charAt(0).toUpperCase() + feature.slice(1)}: {formatValue(value[0])} – {formatValue(value[1])}
+                      {displayFeature}: {formatValue(value[0])} – {formatValue(value[1])}
                       </Typography>
                       <Slider
                         value={value}

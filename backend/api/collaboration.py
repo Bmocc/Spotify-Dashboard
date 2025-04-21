@@ -51,7 +51,6 @@ def get_collaborations(artist_id):
             "explicit": t.explicit,
         } for t in tracks]
 
-        # Only add a link if there is at least one shared track.
         if track_list:
             links.append({
                 "source": main_node_id,
@@ -59,6 +58,8 @@ def get_collaborations(artist_id):
                 "sharedTracks": track_list
             })
 
+    valid_node_ids = {main_node_id} | {link["target"] for link in links}
+    nodes = [node for node in nodes if node["id"] in valid_node_ids]
 
     data = {
         "nodes": nodes,

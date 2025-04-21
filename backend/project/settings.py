@@ -5,16 +5,16 @@ from decouple import config
 LOCAL_RUN = 1
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-STATIC_BASE_DIR = BASE_DIR.parent
+DOCKER_BASE_DIR = BASE_DIR.parent
 
 if LOCAL_RUN:
-    STATIC_BASE_DIR == BASE_DIR.parent
+    DOCKER_BASE_DIR == BASE_DIR.parent
 else:
-    STATIC_BASE_DIR = BASE_DIR
+    DOCKER_BASE_DIR = BASE_DIR
 
 STATIC_URL = '/assets/'
-STATICFILES_DIRS = [os.path.join(STATIC_BASE_DIR, 'frontend/dist/assets')]
-STATIC_ROOT = os.path.join(STATIC_BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [os.path.join(DOCKER_BASE_DIR, 'frontend/dist/assets')]
+STATIC_ROOT = os.path.join(DOCKER_BASE_DIR, 'staticfiles')
 
 MEDIA_BASE_DIR = Path(__file__).resolve().parent
 
@@ -24,7 +24,7 @@ MEDIA_ROOT = os.path.join(MEDIA_BASE_DIR, 'media')
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(STATIC_BASE_DIR, 'frontend/dist')],
+        'DIRS': [os.path.join(DOCKER_BASE_DIR, 'frontend/dist')],
         'APP_DIRS': True,  
         'OPTIONS': {
             'context_processors': [
@@ -66,7 +66,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',  
         # 'NAME': BASE_DIR.parent / 'spotify.sqlite',    
-        'NAME': BASE_DIR.parent / 'spotify_filtered.sqlite',        
+        'NAME': DOCKER_BASE_DIR.parent / 'spotify_filtered.sqlite',        
     }
 }
 

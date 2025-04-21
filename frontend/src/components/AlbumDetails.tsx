@@ -17,7 +17,10 @@ export const AlbumDetails: React.FC<AlbumDetailsProps> = ({ album, onClose }) =>
         right: 50,
         zIndex: 10,
         width: 300,
-        backgroundColor: 'background.paper'
+        backgroundColor: 'background.paper',
+        minHeight: 300,
+        maxHeight: 750,
+        overflowY: 'auto'
       }}
       elevation={5}
     >
